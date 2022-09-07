@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("http://fonts.cdnfonts.com/css/myriad-pro");
 /*!
  * Bootstrap  v5.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -10759,16 +10758,30 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: "Acumin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin"), url("../fonts/Acumin-Variable-Concept.ttf") format("ttf");
+}
 body, html {
-  font-family: "Myriad Pro", sans-serif;
+  font-family: "Acumin", sans-serif;
+}
+
+.f-didot, h2, .h2, h4, .h4 {
+  font-family: "didot-bold", sans-serif;
+}
+
+.f-ab, h3, .h3 {
+  font-family: "sofa-ab-roman", sans-serif;
 }
 
 h3, .h3 {
-  font-size: 5em;
+  font-size: 4em;
 }
 
 h2, .h2 {
-  font-size: 7em;
+  font-size: 5em;
 }
 
 @media (max-width: 991.98px) {
@@ -10782,6 +10795,12 @@ h2, .h2 {
 .cs-p-1 {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+@media (max-width: 991.98px) {
+  .cs-p-1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .section-1 {
@@ -10798,7 +10817,12 @@ h2, .h2 {
 }
 @media (max-width: 991.98px) {
   .banner {
-    min-height: 300px;
+    min-height: 400px;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner {
+    min-height: 270px;
   }
 }
 
@@ -10827,6 +10851,23 @@ h2, .h2 {
 }
 #header .nav-link:hover:before {
   width: 100%;
+}
+@media (max-width: 991.98px) {
+  #header {
+    padding-top: 0;
+  }
+  #header .nav-link {
+    position: relative;
+    line-height: 1;
+    padding: 0;
+  }
+  #header .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+  }
 }
 
 .caret-right {

@@ -1,16 +1,36 @@
-@import url('http://fonts.cdnfonts.com/css/myriad-pro');
 @import "../libs/bootstrap/scss/bootstrap";
 
+@font-face {
+  font-family: 'Acumin';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Acumin'), url('../fonts/Acumin-Variable-Concept.ttf') format('ttf');
+}
+
 body, html {
-  font-family: 'Myriad Pro', sans-serif;
+  font-family: 'Acumin', sans-serif;
+}
+
+.f-didot {
+  font-family: 'didot-bold', sans-serif;
+}
+
+.f-ab {
+  font-family: 'sofa-ab-roman', sans-serif;
+}
+
+h4 {
+  @extend .f-didot;
 }
 
 h3 {
-  font-size: 5em;
+  font-size: 4em;
+  @extend .f-ab;
 }
 
 h2 {
-  font-size: 7em;
+  @extend .f-didot;
+  font-size: 5em;
 }
 
 @include media-breakpoint-down("lg") {
@@ -26,6 +46,10 @@ h2 {
 .cs-p-1 {
   padding-top: 50px;
   padding-bottom: 50px;
+  @include media-breakpoint-down("lg") {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .section-1 {
@@ -40,7 +64,10 @@ h2 {
   min-height: 100vh;
   position: relative;
   @include media-breakpoint-down("lg") {
-    min-height: 300px;
+    min-height: 400px;
+  }
+  @include media-breakpoint-down("md") {
+    min-height: 270px;
   }
 }
 
@@ -71,6 +98,22 @@ h2 {
       &:before {
         width: 100%;
       }
+    }
+  }
+
+  @include media-breakpoint-down("lg") {
+    padding-top: 0;
+    .nav-link {
+      position: relative;
+      line-height: 1;
+      padding: 0;
+    }
+    .navbar-collapse {
+      flex-basis: 100%;
+      flex-grow: 1;
+      align-items: center;
+      background: #0006;
+      padding: 15px;
     }
   }
 }

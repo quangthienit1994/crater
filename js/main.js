@@ -1,3 +1,5 @@
 jQuery(document).ready(function(){
-    AOS.init();
+    AOS.init({
+        offset: -200
+    });
 })
